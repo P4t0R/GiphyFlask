@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <form method="post" action="/ruta_de_tu_flask">
+                    <!-- Campo de entrada de texto para el DNI -->
+                    <div class="input-group mt-5 mb-2" style="width: 20%;">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">RNC</span>
+                        </div>
+                        <input type="text" class="form-control mx-2" name="dni" placeholder="Ingrese RNC" aria-label="Ingrese DNI" aria-describedby="basic-addon2">
+                    </div>
+
+                    <!-- Boton seleccion Tipo -->
+                    <div class="mt-2">
+                        <div class="btn-group" role="group" aria-label="Seleccionar tipo">
+                            <input type="radio" class="btn-check" name="tipo" id="btnPersona" value="Persona" autocomplete="off" checked>
+                            <label class="btn btn-outline-secondary mx-1" for="btnPersona">Persona</label>
+
+                            <input type="radio" class="btn-check" name="tipo" id="btnEmpresa" value="Empresa" autocomplete="off">
+                            <label class="btn btn-outline-secondary mx-1" for="btnEmpresa">Empresa</label>
+                        </div>
+                    </div>
+
+                    <!-- Boton seleccion Enviroment -->
+                    <div class="btn-group mt-3 mb-2" role="group" aria-label="Seleccionar ambiente">
+                        <input type="radio" class="btn-check" name="ambiente" id="btnAlpha" value="Alpha" autocomplete="off">
+                        <label class="btn btn-outline-info mx-1" for="btnAlpha">Alpha</label>
+
+                        <input type="radio" class="btn-check" name="ambiente" id="btnBeta" value="Beta" autocomplete="off" checked>
+                        <label class="btn btn-outline-warning mx-1" for="btnBeta">Beta</label>
+
+                        <input type="radio" class="btn-check" name="ambiente" id="btnProd" value="Prod" autocomplete="off">
+                        <label class="btn btn-outline-success mx-1" for="btnProd">Prod</label>
+                    </div>
+
+                    <!-- Botón GET -->
+                    <div class="btn-group mt-3 mb-2">
+                        <button type="submit" class="btn btn-primary btn-lg mx-5">GET</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

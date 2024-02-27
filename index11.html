@@ -1,0 +1,22 @@
+<div class="col-6">
+    <form id="pythonForm" method="POST" action="/ruta_de_tu_flask">
+        <div class="btn-group model-py">
+            <button id="dropdownButton" class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Selecciona Python
+            </button>
+            <ul class="dropdown-menu">
+                {% for modelo in modelos %}
+                <li><a class="dropdown-item" href="#" onclick="updateButton('{{ modelo }}')">{{ modelo }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Campo oculto para almacenar el valor seleccionado -->
+        <input type="hidden" id="selectedPython" name="selectedPython">
+
+        <!-- Botón TEST -->
+        <div class="btn-group mt-5 mb-5">
+            <button type="submit" class="btn btn-primary btn-lg mx-5">TEST</button>
+        </div>
+    </form>
+</div>
